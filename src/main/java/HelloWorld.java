@@ -11,5 +11,4 @@ public class HelloWorld {
 
         this.message = message;
     }
-     
 }

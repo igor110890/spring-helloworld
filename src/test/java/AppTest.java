@@ -6,11 +6,9 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = AppConfig.class)
 public class AppTest {
-
     @Autowired
     private ApplicationContext applicationContext;
 
@@ -23,7 +21,6 @@ public class AppTest {
 
         Cat one = applicationContext.getBean(Cat.class);
         Cat two = applicationContext.getBean(Cat.class);
-
         Assert.assertSame("Тест провален, не корректная настройка бина HelloWorld", tree, leaf);
         Assert.assertNotSame("Тест провален, не корректная настройка бина Cat", one, two);
     }
